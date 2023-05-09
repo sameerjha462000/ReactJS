@@ -24,3 +24,7 @@
   outline: none;
   border-color: #4f005f;
 }
+
+li:last-child {
+  margin-bottom: 0px;
+}

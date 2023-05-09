@@ -8,6 +8,7 @@ import classes from "./AddUsers.module.css";
 function AddUser(props) {
   const [enteredName, setEnteredName] = useState("");
   const [enteredAge, setEnteredAge] = useState("");
+  const [userList, setUserList] = useState([]);
 
   const addUserHandler = (event) => {
     event.preventDefault();
@@ -22,6 +23,12 @@ function AddUser(props) {
     }
 
     // console.log(enteredName, enteredAge);
+    const updatedUserList = [
+      ...userList,
+      { Name: enteredName, Age: enteredAge },
+    ];
+
+    setUserList(updatedUserList);
     setEnteredAge("");
     setEnteredName("");
   };
@@ -53,6 +60,16 @@ function AddUser(props) {
         />
         <Button type="submit">Add User</Button>
       </form>
+
+      <ul>
+        {userList.map((user) => {
+          return (
+            <li style={{ marginBottom: "10px" }}>
+              {user.Name} is {user.Age} years old <br />
+            </li>
+          );
+        })}
+      </ul>
     </Card>
   );
 }
