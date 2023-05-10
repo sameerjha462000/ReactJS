@@ -2,6 +2,7 @@ import React, { useState } from "react";
 
 import AddUser from "./components/Users/AddUser";
 import UsersList from "./components/Users/UsersList";
+import { Fragment } from "react";
 
 function App() {
   const [usersList, setUsersList] = useState([]);
@@ -16,10 +17,22 @@ function App() {
   };
 
   return (
-    <div>
+    // <>
+    //   <AddUser onAddUser={addUserHandler} />
+    //   <UsersList users={usersList} />
+    // </>
+
+    // or we may have written React.Fragment
+    // <React.Fragment>
+    //   <AddUser onAddUser={addUserHandler} />
+    //   <UsersList users={usersList} />
+    // </React.Fragment>
+
+    // This is applicable when we imported {Fragment} from 'react
+    <Fragment>
       <AddUser onAddUser={addUserHandler} />
       <UsersList users={usersList} />
-    </div>
+    </Fragment>
   );
 }
 
