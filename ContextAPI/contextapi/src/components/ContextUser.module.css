@@ -1,0 +1,29 @@
+.value {
+  height: 50px;
+  width: 50px;
+  background-color: blueviolet;
+  font-size: 30px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+}
+
+.button {
+  border: 2px solid rgb(4, 114, 77);
+  background-color: rgb(4, 114, 77);
+  font-size: 30px;
+  padding: 10px;
+  margin-bottom: 30px;
+}
+
+.container {
+  width: 500px;
+  height: 500px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  border: 3px solid pink;
+  align-items: space-around;
+}
